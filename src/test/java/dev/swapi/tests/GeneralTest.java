@@ -39,7 +39,7 @@ public class GeneralTest {
     @Test
     void checkDorinPlanetInformation() {
         final String planetName = "Dorin";
-        final int expectedDiameter = 134001;
+        final int expectedDiameter = 13400;
         final int expectedNumOfResident = 1;
         swapiActions.makeGetPlanetsRequest(planetName);
         swapiActions.statusCodeShouldBe(SC_OK);

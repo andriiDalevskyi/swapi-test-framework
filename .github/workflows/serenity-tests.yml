@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  run-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,3 +22,9 @@ jobs:
 
       - name: Run Serenity Tests
         run: mvn clean verify
+
+      - name: Save Serenity Reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: serenity-reports
+          path: target/site
